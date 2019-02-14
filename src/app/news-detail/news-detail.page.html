@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>NEWS DETAIL</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-card  (click)="onOpenPage()"> 
+        <ion-card-header>
+          <ion-img [src]="currentArticle?.urlToImage"></ion-img>
+          <ion-card-title>{{currentArticle?.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+         {{currentArticle?.content}}
+         <ion-button fill="outline" slot="end" (click)="onOpenPage()">VIEW</ion-button>
+        </ion-card-content>
+       
+      </ion-card>
+</ion-content>
